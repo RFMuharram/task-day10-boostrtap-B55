@@ -32,14 +32,15 @@ body {
   right: 0;
   z-index: 9999;
 }
-
 .navbar .navbar-logo {
   font-size: 2rem;
   font-weight: 700;
   color: #2b8292;
   font-family: "Jaini", system-ui;
 }
-
+.navbar-nav{
+  margin-left: 50px;
+}
 .navbar .navbar-nav a {
   color: #fff;
   font-family: "Teko", sans-serif;
@@ -47,11 +48,9 @@ body {
   display: inline-block;
   margin: 1rem;
 }
-
 .navbar .navbar-nav a:hover {
   color: #11343a;
 }
-
 .navbar .navbar-nav a::after {
   content: "";
   display: block;
@@ -60,21 +59,19 @@ body {
   transform: scaleX(0);
   transition: 0.3s linear;
 }
-
 .navbar .navbar-nav a:hover::after {
   transform: scaleX(0.5);
 }
-
 .navbar-extra a {
   color: #fff;
   margin: 0 0.5rem;
 }
-
 #hamburger-menu {
   display: none;
 }
 .navbar .btn-login{
   padding: 10px 20px;
+  margin-left: 200px;
   font-size: 1rem;
   color: #fff;
   background-color: #11343a;
@@ -258,7 +255,7 @@ body {
 .overlay {
   width: 100%;
   height: 0;
-  background: rgba(53, 105, 109, 0.8) ;
+  background: rgba(53, 105, 109, 0.9) ;
   border-radius: 10px;
   position: absolute;
   left: 0;
@@ -272,11 +269,11 @@ body {
   text-align: center;
   font-size: 14px;
   overflow: hidden;
-  /* transition: max-height 0.8s; */
-  /* transition: height 0.8s; */
+  /* transition: max-height 0.8s;
+  transition: height 0.8s; */
 }
 .card:hover img {
-  transform: scale(0.8);
+  transform: scale(1.1);
 }
 .card:hover .overlay {
   height: 100%;
@@ -354,7 +351,10 @@ footer .social a:hover{
  color: #000;
 }
 
-footer .links{
+footer .links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 0.5rem;
 }
 
@@ -372,7 +372,7 @@ footer .links a:hover{
  }
 /* Footer End */
 
-@media only screen and (max-width: 768px) and (min-width: 576px) {
+@media only screen and (max-width: 1189px) and (min-width: 576px) {
   #hamburger-menu {
     display: inline-block;
   }
@@ -388,10 +388,15 @@ footer .links a:hover{
   .navbar .navbar-nav.active {
     right: 0;
   }
-  .navbar .navbar-nav a {
+  .navbar .navbar-nav a,
+  .navbar .btn-login {
     display: block;
     margin: 1.5rem;
     padding: 0.5rem;
+  }
+  .navbar .btn-login {
+    background-color: #000;
+    border: 1px solid #000;
   }
   .navbar .navbar-nav a:hover {
     color: #000;
@@ -421,10 +426,15 @@ footer .links a:hover{
   .navbar .navbar-nav.active {
     right: 0;
   }
-  .navbar .navbar-nav a {
+  .navbar .navbar-nav a,
+  .navbar .btn-login{
     display: block;
     margin: 1.5rem;
     padding: 0.5rem;
+  }
+  .navbar .btn-login {
+    background-color: #000;
+    border: 1px solid #000;
   }
   .navbar .navbar-nav a:hover {
     color: #000;

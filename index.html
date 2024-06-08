@@ -32,11 +32,11 @@
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
         <a href="./project.html">Add Project</a>
+        <button class="btn-login">Log in</button>
       </div>
       <div class="navbar-extra">
         <a href="#" id="hamburger-menu"><i class="fa-solid fa-bars"></i></a>
       </div>
-      <button class="btn-login">Log in</button>
     </nav>
 
     <!-- Navbar section END -->
@@ -118,54 +118,18 @@
           5 <i class="fa-solid fa-mug-hot" id="cup-icon"></i>
         </button>
       </div>
-      <div class="testi-container">
-        <div class="testi-card">
-          <img src="./assets/IMG/project-2.jpg" alt="photo" />
-          <p class="author">sandra</p>
-          <p class="comment">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
-        </div>
-        <div class="testi-card">
-          <img src="./assets/IMG/project-2.jpg" alt="photo" />
-          <p class="author">sandra</p>
-          <p class="comment">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
-            laborum.
-          </p>
-        </div>
-        <div class="testi-card">
-          <img src="./assets/IMG/project-2.jpg" alt="photo" />
-          <p class="author">sandra</p>
-          <p class="comment">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit omnis
-            soluta sapiente unde dolore cumque.
-          </p>
-        </div>
-        <div class="testi-card">
-          <img src="./assets/IMG/project-2.jpg" alt="photo" />
-          <p class="author">sandra</p>
-          <p class="comment">Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div class="testi-card">
-          <img src="./assets/IMG/project-2.jpg" alt="photo" />
-          <p class="author">sandra</p>
-          <p class="comment">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis
-            sed accusantium soluta excepturi optio modi amet odit doloribus
-            consequuntur dolor.
-          </p>
-        </div>
+      <div class="testi-container" id="testimonial">
+       
       </div>
     </section>
-
     <!-- Testimonial Section END -->
 
     <!-- Gallery Section Start -->
 
     <section class="gallery" id="gallery">
       <h2>Gallery</h2>
-      <img src="./assets/IMG/caution.jpeg" alt="">
+      <div class="gallery-container" id="gallery-container">
+      </div>
     </section>
 
     <!-- Gallery Section End -->
@@ -209,7 +173,9 @@
             <i class="fa-solid fa-comment"></i>
             <textarea id="message" placeholder="Message"></textarea>
           </div>
-          <button type="submit" class="btn" onclick="submitHandler()">Send</button>
+          <button type="submit" class="btn" onclick="submitHandler(event)">
+            Send
+          </button>
         </form>
       </div>
     </section>
@@ -238,7 +204,8 @@
         <a href="#home">Home</a>
         <a href="#hero">About</a>
         <a href="#contact">Contact</a>
-        <a href="#">Testimonial</a>
+        <a href="#testimoni">Testimonial</a>
+        <a href="#gallery">Gallery</a>
         <a href="./project.html">Add Project</a>
       </div>
 
@@ -248,6 +215,8 @@
     </footer>
 
     <!-- Footer End -->
+    <script src="./assets/JS/asyncTesti.js"></script>
+    <script src="./assets/JS/hofGallery.js"></script>
     <script src="../assets/JS/contact.js"></script>
     <script src="../assets/JS/toggle.js"></script>
   </body>

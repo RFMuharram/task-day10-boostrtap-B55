@@ -172,6 +172,9 @@ footer .social a:hover {
 }
 
 footer .links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 0.5rem;
 }
 
@@ -194,7 +197,7 @@ footer .credit span {
 /* Footer End */
 
 /* TABLET */
-@media only screen and (max-width: 768px) and (min-width: 576px) {
+@media only screen and (max-width: 1189px) and (min-width: 576px) {
   #hamburger-menu {
     display: inline-block;
   }
@@ -210,10 +213,15 @@ footer .credit span {
   .navbar .navbar-nav.active {
     right: 0;
   }
-  .navbar .navbar-nav a {
+  .navbar .navbar-nav a,
+  .navbar .btn-login {
     display: block;
     margin: 1.5rem;
     padding: 0.5rem;
+  }
+  .navbar .btn-login {
+    background-color: #000;
+    border: 1px solid #000;
   }
   .navbar .navbar-nav a:hover {
     color: #000;
@@ -224,6 +232,9 @@ footer .credit span {
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.1);
   }
+  .image-content img {
+    height: 100%;
+   }
 }
 
 /* MOBILE */
@@ -243,10 +254,15 @@ footer .credit span {
   .navbar .navbar-nav.active {
     right: 0;
   }
-  .navbar .navbar-nav a {
+  .navbar .navbar-nav a,
+  .navbar .btn-login {
     display: block;
     margin: 1.5rem;
     padding: 0.5rem;
+  }
+  .navbar .btn-login {
+    background-color: #000;
+    border: 1px solid #000;
   }
   .navbar .navbar-nav a:hover {
     color: #000;
@@ -256,5 +272,11 @@ footer .credit span {
   }
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.1);
+  }
+  .title{
+    font-size: 1.7rem;
+}
+  .image-content img {
+   height: 100%;
   }
 }

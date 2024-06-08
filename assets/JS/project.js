@@ -149,7 +149,7 @@ function newData() {
             ${project.javaScript ? '<i class="fa-brands fa-js"></i>' : ""}
             ${project.vueJS ? '<i class="fa-brands fa-vuejs"></i>' : ""}
           </div>
-          <a href="../PAGES/bigproject.html">Read More</a>
+          <a href="./bigproject.html">Read More</a>
           <div class="btn-container" style="display: flex; justify-content: space-between; margin-top: 20px;">
             <button class="edit-btn">Edit</button>
             <button class="delete-btn">Delete</button>
@@ -162,10 +162,6 @@ function newData() {
 
 }
 
-{/* <i class="fa-brands fa-react"></i>
-<i class="fa-brands fa-vuejs"></i>
-<i class="fa-brands fa-node-js"></i>
-<i class="fa-brands fa-js"></i> */}
 
 setInterval(function () {
     newData();
