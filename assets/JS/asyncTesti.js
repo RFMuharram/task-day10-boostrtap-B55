@@ -21,14 +21,17 @@ async function alltesti (){
     const Testimoni = JSON.parse(await getTestimoniData("https://api.npoint.io/e03d1bb13cd145a72fc9"));
 
     const testimonialHTML = Testimoni.map((testimonial) => {
-        return ` <div class="testi-card">
-    <img src="${testimonial.image}" alt="photo" />
-    <p class="author">${testimonial.author}</p>
-    <p class="comment">
-    ${testimonial.comment}
-    </p>
-    <p class="rating">${testimonial.rating} <i class="fa-solid fa-mug-hot"></i></p>
-  </div>`
+        return ` <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100 d-flex text-white" style="border: 5px solid #11343a; background-color: transparent;">
+          <img src="${testimonial.image}" class="card-img-top"  style="object-fit: cover;" alt="photo" />
+          <div class="card-body d-flex flex-column">
+            <p class="card-text fw-bold author">${testimonial.author}</p>
+            <p class="card-text fw-light comment flex-grow-1">${testimonial.comment}</p>
+            <p class="card-text rating text-end">${testimonial.rating} <i class="fa-solid fa-mug-hot"></i></p>
+          </div>
+        </div>
+      </div>
+`
     })
 
     document.getElementById("testimonial").innerHTML = testimonialHTML.join("")
@@ -43,20 +46,23 @@ async function ratingByCup(rating) {
     const ratingByCup = Testimoni.filter(testimonial => testimonial.rating == rating)
     
     const testimonialHTML = ratingByCup.map((testimonial) => {
-        return ` <div class="testi-card">
-    <img src="${testimonial.image}" alt="photo" />
-    <p class="author">${testimonial.author}</p>
-    <p class="comment">
-    ${testimonial.comment}
-    </p>
-    <p class="rating">${testimonial.rating} <i class="fa-solid fa-mug-hot"></i></p>
-  </div>`
+        return ` <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100 d-flex text-white" style="border: 5px solid #11343a; background-color: transparent;">
+          <img src="${testimonial.image}" class="card-img-top"  style="object-fit: cover;" alt="photo" />
+          <div class="card-body d-flex flex-column">
+            <p class="card-text fw-bold author">${testimonial.author}</p>
+            <p class="card-text fw-light comment flex-grow-1">${testimonial.comment}</p>
+            <p class="card-text rating text-end">${testimonial.rating} <i class="fa-solid fa-mug-hot"></i></p>
+          </div>
+        </div>
+      </div>
+`
         
     });
     document.getElementById("testimonial").innerHTML = testimonialHTML.join("")
 
     if(ratingByCup.length <= 0){
-        return document.getElementById("testimonial").innerHTML = "<h2> UPSSS!!! No One Pick This Cup.</h2>"
+        return document.getElementById("testimonial").innerHTML = `<h2 class="text-center text-white fs-1 fw-bold"> UPSSS!!! No One Pick This Cup.</h2>`
     }
 }
 

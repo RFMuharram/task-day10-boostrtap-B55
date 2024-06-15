@@ -5,37 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My WEB</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css?_cacheOverride=1716029438318"
       integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
     <link
       rel="shortcut icon"
-      href="../assets/IMG/2nd R-logo.png"
-      type="image/x-icon"
+      href="./assets/IMG/favicon.ico"
+      type="image/png"
     />
     <link rel="stylesheet" href="./assets/CSS/home.css" />
   </head>
   <body>
     <!-- Navbar section START-->
 
-    <nav class="navbar">
-      <a href="./index.html" class="navbar-logo">MUHARRAM</a>
-
-      <div class="navbar-nav">
-        <a href="./index.html">Home</a>
-        <a href="#hero">About</a>
-        <a href="#testimoni">Testimonial</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-        <a href="./project.html">Add Project</a>
-        <button class="btn-login">Log in</button>
-      </div>
-      <div class="navbar-extra">
-        <a href="#" id="hamburger-menu"><i class="fa-solid fa-bars"></i></a>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-3">
+      <div class="container-fluid">
+        <a href="./home.html" class="navbar-brand text-secondary fs-2"
+          >MUHARRAM</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link text-primary fs-4"
+                aria-current="page"
+                href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary fs-4" href="#hero">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary fs-4" href="#project">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary fs-4" href="#testimoni"
+                >Testimonial</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary fs-4" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary fs-4" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary fs-4" href="./project.html"
+                >Add Project</a
+              >
+            </li>
+          </ul>
+          <button class="btn btn-outline-primary" type="submit">Log in</button>
+        </div>
       </div>
     </nav>
 
@@ -54,13 +96,14 @@
     <section class="profile-hero" id="hero">
       <div class="container-hero">
         <div class="left-content">
-          <h3 class="hello">
-            Hello, my name is <span class="name"> Rizky Fajar Muharram</span>
-          </h3>
+          <h4 class="fw-bold">
+            Hello, my name is
+            <span style="color: #0ef"> Rizky Fajar Muharram</span>
+          </h4>
           <div class="typing">
             <p class="text-typing">I'm a Full-Stack Developer.</p>
           </div>
-          <p class="story">
+          <p class="fs-5">
             Learing about web developing it's something new for me. As someone
             who graduate from pilot school, Tech World it's so challenging for
             me. I want to improve my Tech skill spescially on coding. Welcome to
@@ -69,7 +112,8 @@
           <a
             href="https://drive.google.com/file/d/1X1jcAa-U3SX_xE2vNoaqHs58WCoMgZWT/view?usp=sharing"
             target="_blank"
-            id="cv-btn"
+            class="btn btn-dark-green"
+            style="color: #000"
             >More About Me</a
           >
           <div class="sosmed">
@@ -88,48 +132,379 @@
           </div>
         </div>
         <div class="right-content">
-          <img src="../assets/IMG/profil.jpeg" alt="photo" />
+          <img src="./assets/IMG/profil.jpeg" alt="photo" />
         </div>
       </div>
     </section>
+
     <!-- Hero section END -->
+
+    <!-- Projects START -->
+
+    <section class="project-section" id="project">
+      <div class="containers">
+        <h2
+          class="text-center text-white fw-bold fs-1 mb-4"
+          style="font-family: Teko, sans-serif; letter-spacing: 2px"
+        >
+          Projects
+        </h2>
+        <div
+          class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
+          id="new-content"
+        >
+          <div class="col">
+            <div class="card border-0">
+              <img
+                src="./assets/IMG/project-1.jpg"
+                class="card-img-top"
+                alt="photo"
+              />
+              <div class="overlay">
+                <h3
+                  class="text-center"
+                  style="
+                    font-family: Dancing Script, cursive;
+                    letter-spacing: 2px;
+                  "
+                >
+                 Mountainering
+                </h3>
+                <p class="fw-light" style="color: #373a40">
+                  Duration : 3 days ago
+                </p>
+                <br />
+                <p class="fw-light textt-wrap text-justify">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Itaque molestias voluptate commodi sint facilis repudiandae
+                  ducimus ratione ea soluta, accusamus esse praesentium
+                  exercitationem? Adipisci, numquam?
+                </p>
+                <div class="row justify-content-start mt-3">
+                  <div class="col-auto me-1">
+                    <i class="fa-brands fa-node-js"></i>
+                  </div>
+                  <div class="col-auto me-1">
+                    <i class="fa-brands fa-react"></i>
+                  </div>
+                  <div class="col-auto me-1">
+                    <i class="fa-brands fa-js"></i>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fa-brands fa-vuejs"></i>
+                  </div>
+                </div>
+                <a
+                  href="./bigproject.html"
+                  class="btn btn-link fw-lighter custom-link"
+                  >Read More</a
+                >
+                <div class="btn-container d-flex justify-content-between mt-3">
+                  <button class="btn btn-success border-0 edit-btn">
+                    Edit
+                  </button>
+                  <button class="btn btn-danger border-0 delete-btn">
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0">
+              <img
+                src="./assets/IMG/project-2.jpg"
+                class="card-img-top"
+                alt="photo"
+              />
+              <div class="overlay">
+                <h3
+                  class="text-center"
+                  style="
+                    font-family: Dancing Script, cursive;
+                    letter-spacing: 2px;
+                  "
+                >
+                  Scubadiving
+                </h3>
+                <p class="fw-light" style="color: #373a40">
+                  Duration : 2 Months ago
+                </p>
+                <br />
+                <p class="fw-light textt-wrap text-justify">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Itaque molestias voluptate commodi sint facilis repudiandae
+                  ducimus ratione ea soluta, accusamus esse praesentium
+                  exercitationem? Adipisci, numquam?
+                </p>
+                <div class="row justify-content-start mt-3">
+                  <div class="col-auto me-1">
+                    <i class="fa-brands fa-node-js"></i>
+                  </div>
+                  <div class="col-auto me-1">
+                    <i class="fa-brands fa-react"></i>
+                  </div>
+                  <div class="col-auto me-1">
+                    <i class="fa-brands fa-js"></i>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fa-brands fa-vuejs"></i>
+                  </div>
+                </div>
+                <a
+                  href="./bigproject.html"
+                  class="btn btn-link fw-lighter custom-link"
+                  >Read More</a
+                >
+                <div class="btn-container d-flex justify-content-between mt-3">
+                  <button class="btn btn-success border-0 edit-btn">
+                    Edit
+                  </button>
+                  <button class="btn btn-danger border-0 delete-btn">
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0">
+              <img
+                src="./assets/IMG/project-3.jpg"
+                class="card-img-top"
+                alt="photo"
+              />
+              <div class="overlay">
+                <h3
+                  class="text-center"
+                  style="
+                    font-family: Dancing Script, cursive;
+                    letter-spacing: 2px;
+                  "
+                >
+                  Traveling
+                </h3>
+                <p class="fw-light" style="color: #373a40">
+                  Duration : 3 Years ago
+                </p>
+                <br />
+                <p class="fw-light textt-wrap text-justify">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Itaque molestias voluptate commodi sint facilis repudiandae
+                  ducimus ratione ea soluta, accusamus esse praesentium
+                  exercitationem? Adipisci, numquam?
+                </p>
+                <div class="row justify-content-start mt-3">
+                  <div class="col-auto me-1">
+                    <i class="fa-brands fa-node-js"></i>
+                  </div>
+                  <div class="col-auto me-1">
+                    <i class="fa-brands fa-react"></i>
+                  </div>
+                  <div class="col-auto me-1">
+                    <i class="fa-brands fa-js"></i>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fa-brands fa-vuejs"></i>
+                  </div>
+                </div>
+                <a
+                  href="./bigproject.html"
+                  class="btn btn-link fw-lighter custom-link"
+                  >Read More</a
+                >
+                <div class="btn-container d-flex justify-content-between mt-3">
+                  <button class="btn btn-success border-0 edit-btn">
+                    Edit
+                  </button>
+                  <button class="btn btn-danger border-0 delete-btn">
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0">
+              <img
+                src="./assets/IMG/project-2.jpg"
+                class="card-img-top"
+                alt="photo"
+              />
+              <div class="overlay">
+                <h3
+                  class="text-center"
+                  style="
+                    font-family: Dancing Script, cursive;
+                    letter-spacing: 2px;
+                  "
+                >
+                  Scubadiving
+                </h3>
+                <p class="fw-light" style="color: #373a40">
+                  Duration : 3 weeks ago
+                </p>
+                <br />
+                <p class="fw-light textt-wrap text-justify">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Itaque molestias voluptate commodi sint facilis repudiandae
+                  ducimus ratione ea soluta, accusamus esse praesentium
+                  exercitationem? Adipisci, numquam?
+                </p>
+                <div class="row justify-content-start mt-3">
+                  <div class="col-auto me-1">
+                    <i class="fa-brands fa-node-js"></i>
+                  </div>
+                  <div class="col-auto me-1">
+                    <i class="fa-brands fa-react"></i>
+                  </div>
+                  <div class="col-auto me-1">
+                    <i class="fa-brands fa-js"></i>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fa-brands fa-vuejs"></i>
+                  </div>
+                </div>
+                <a
+                  href="./bigproject.html"
+                  class="btn btn-link fw-lighter custom-link"
+                  >Read More</a
+                >
+                <div class="btn-container d-flex justify-content-between mt-3">
+                  <button class="btn btn-success border-0 edit-btn">
+                    Edit
+                  </button>
+                  <button class="btn btn-danger border-0 delete-btn">
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0">
+              <img
+                src="./assets/IMG/project-1.jpg"
+                class="card-img-top"
+                alt="photo"
+              />
+              <div class="overlay">
+                <h3
+                  class="text-center"
+                  style="
+                    font-family: Dancing Script, cursive;
+                    letter-spacing: 2px;
+                  "
+                >
+                 Mountainering
+                </h3>
+                <p class="fw-light" style="color: #373a40">
+                  Duration : 4 Years ago
+                </p>
+                <br />
+                <p class="fw-light textt-wrap text-justify">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Itaque molestias voluptate commodi sint facilis repudiandae
+                  ducimus ratione ea soluta, accusamus esse praesentium
+                  exercitationem? Adipisci, numquam?
+                </p>
+                <div class="row justify-content-start mt-3">
+                  <div class="col-auto me-1">
+                    <i class="fa-brands fa-node-js"></i>
+                  </div>
+                  <div class="col-auto me-1">
+                    <i class="fa-brands fa-react"></i>
+                  </div>
+                  <div class="col-auto me-1">
+                    <i class="fa-brands fa-js"></i>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fa-brands fa-vuejs"></i>
+                  </div>
+                </div>
+                <a
+                  href="./bigproject.html"
+                  class="btn btn-link fw-lighter custom-link"
+                  >Read More</a
+                >
+                <div class="btn-container d-flex justify-content-between mt-3">
+                  <button class="btn btn-success border-0 edit-btn">
+                    Edit
+                  </button>
+                  <button class="btn btn-danger border-0 delete-btn">
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects END -->
 
     <!-- Testimonial Section START -->
 
     <section class="testimoni-section" id="testimoni">
-      <h2>What They Said?</h2>
-      <div class="ratings">
-        <button onclick="alltesti()" class="cupbutton" id="cup-icon">
-          All
-        </button>
-        <button onclick="ratingByCup(1)" class="cupbutton">
-          1 <i class="fa-solid fa-mug-hot" id="cup-icon"></i>
-        </button>
-        <button onclick="ratingByCup(2)" class="cupbutton">
-          2 <i class="fa-solid fa-mug-hot" id="cup-icon"></i>
-        </button>
-        <button onclick="ratingByCup(3)" class="cupbutton">
-          3 <i class="fa-solid fa-mug-hot" id="cup-icon"></i>
-        </button>
-        <button onclick="ratingByCup(4)" class="cupbutton">
-          4 <i class="fa-solid fa-mug-hot" id="cup-icon"></i>
-        </button>
-        <button onclick="ratingByCup(5)" class="cupbutton">
-          5 <i class="fa-solid fa-mug-hot" id="cup-icon"></i>
-        </button>
-      </div>
-      <div class="testi-container" id="testimonial">
-       
+      <div class="container">
+        <h2
+          class="text-center text-white fw-bold fs-1 mb-4"
+          style="font-family: Teko, sans-serif; letter-spacing: 2px"
+        >
+          What They Said?
+        </h2>
+        <div class="ratings text-center mb-4">
+          <button onclick="alltesti()" class="btn btn-outline-dark cupbutton">
+            All
+          </button>
+          <button
+            onclick="ratingByCup(1)"
+            class="btn btn-outline-dark cupbutton"
+          >
+            1 <i class="fa-solid fa-mug-hot"></i>
+          </button>
+          <button
+            onclick="ratingByCup(2)"
+            class="btn btn-outline-dark cupbutton"
+          >
+            2 <i class="fa-solid fa-mug-hot"></i>
+          </button>
+          <button
+            onclick="ratingByCup(3)"
+            class="btn btn-outline-dark cupbutton"
+          >
+            3 <i class="fa-solid fa-mug-hot"></i>
+          </button>
+          <button
+            onclick="ratingByCup(4)"
+            class="btn btn-outline-dark cupbutton"
+          >
+            4 <i class="fa-solid fa-mug-hot"></i>
+          </button>
+          <button
+            onclick="ratingByCup(5)"
+            class="btn btn-outline-dark cupbutton"
+          >
+            5 <i class="fa-solid fa-mug-hot"></i>
+          </button>
+        </div>
+        <div class="row justify-content-center" id="testimonial"></div>
       </div>
     </section>
+
     <!-- Testimonial Section END -->
 
     <!-- Gallery Section Start -->
 
     <section class="gallery" id="gallery">
-      <h2>Gallery</h2>
-      <div class="gallery-container" id="gallery-container">
-      </div>
+      <h2
+        class="text-center text-white fw-bold fs-1 mb-4"
+        style="font-family: Teko, sans-serif; letter-spacing: 2px"
+      >
+        Gallery
+      </h2>
+      <div class="gallery-container" id="gallery-container"></div>
     </section>
 
     <!-- Gallery Section End -->
@@ -137,46 +512,95 @@
     <!-- Contact Section START -->
 
     <section class="contact" id="contact">
-      <h2>Get In Touch</h2>
-
-      <div class="rows">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.8691751018728!2d106.72214257508041!3d-6.148266960267624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7f842e75c99%3A0xce22966e7a8a993b!2sJl.%20Utama%20III%2C%20RT.4%2FRW.3%2C%20Cengkareng%20Bar.%2C%20Kecamatan%20Cengkareng%2C%20Kota%20Jakarta%20Barat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sen!2sid!4v1716555847273!5m2!1sen!2sid"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          class="map"
-        ></iframe>
-        <form action="">
-          <div class="input-grup">
-            <i class="fa-solid fa-user"></i>
-            <input type="text" placeholder="Name" id="name" />
+      <div class="container">
+        <h2
+          class="text-center text-white fw-bold fs-1 mb-4"
+          style="font-family: Teko, sans-serif; letter-spacing: 2px"
+        >
+          Get In Touch
+        </h2>
+        <div class="row">
+          <div class="col-lg-6">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.8691751018728!2d106.72214257508041!3d-6.148266960267624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7f842e75c99%3A0xce22966e7a8a993b!2sJl.%20Utama%20III%2C%20RT.4%2FRW.3%2C%20Cengkareng%20Bar.%2C%20Kecamatan%20Cengkareng%2C%20Kota%20Jakarta%20Barat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sen!2sid!4v1716555847273!5m2!1sen!2sid"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="map"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
           </div>
-          <div class="input-grup">
-            <i class="fa-solid fa-envelope"></i>
-            <input type="text" placeholder="Email" id="email" />
+          <div class="col-lg-6 p-3">
+            <form action="">
+              <div class="input-group mb-3">
+                <span class="input-group-text"
+                  ><i class="fa-solid fa-user"></i
+                ></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Name"
+                  id="name"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text"
+                  ><i class="fa-solid fa-envelope"></i
+                ></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Email"
+                  id="email"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text"
+                  ><i class="fa-solid fa-phone"></i
+                ></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Phone"
+                  id="phone"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text"
+                  ><i class="fa-solid fa-paperclip"></i
+                ></span>
+                <select class="form-select" id="subject">
+                  <option selected>Subject</option>
+                  <option value="1">Full-Stack</option>
+                  <option value="2">Frontend Dev</option>
+                  <option value="3">Backend Dev</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <span class="input-group-text align-items-start p-2"
+                  ><i class="fa-solid fa-comment"></i
+                ></span>
+                <textarea
+                  class="form-control"
+                  placeholder="Message"
+                  style="resize: none; height: 150px"
+                  id="message"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-dark-green btn-lg mt-3 text-center d-grid justify-content-center mx-auto"
+                onclick="submitHandler(event)"
+              >
+                Send
+              </button>
+            </form>
           </div>
-          <div class="input-grup">
-            <i class="fa-solid fa-phone"></i>
-            <input type="text" placeholder="Phone" id="phone" />
-          </div>
-          <div class="input-grup">
-            <i class="fa-solid fa-paperclip"></i>
-            <select id="subject">
-              <option>Subject</option>
-              <option>Full-stack Dev</option>
-              <option>Frontend Dev</option>
-              <option>Backend Dev</option>
-            </select>
-          </div>
-          <div class="input-grup">
-            <i class="fa-solid fa-comment"></i>
-            <textarea id="message" placeholder="Message"></textarea>
-          </div>
-          <button type="submit" class="btn" onclick="submitHandler(event)">
-            Send
-          </button>
-        </form>
+        </div>
       </div>
     </section>
 
@@ -184,40 +608,48 @@
 
     <!-- Footer Start -->
 
-    <footer>
+    <footer class="bg-custom text-white text-center mt-5">
       <div class="social">
         <a href="https://linktr.ee/rfmuharram" target="_blank"
-          ><i class="fa-brands fa-instagram"></i
+          ><i class="fab fa-instagram"></i
         ></a>
         <a href="https://linktr.ee/rfmuharram" target="_blank"
-          ><i class="fa-brands fa-x-twitter"></i
+          ><i class="fab fa-twitter"></i
         ></a>
         <a href="https://linktr.ee/rfmuharram" target="_blank"
-          ><i class="fa-brands fa-linkedin-in"></i
+          ><i class="fab fa-linkedin-in"></i
         ></a>
         <a href="https://linktr.ee/rfmuharram" target="_blank">
-          <i class="fa-brands fa-github"></i
+          <i class="fab fa-github"></i
         ></a>
       </div>
 
-      <div class="links">
-        <a href="#home">Home</a>
-        <a href="#hero">About</a>
-        <a href="#contact">Contact</a>
-        <a href="#testimoni">Testimonial</a>
-        <a href="#gallery">Gallery</a>
-        <a href="./project.html">Add Project</a>
+      <div class="links mt-1 mb-2 d-flex justify-content-center flex-wrap">
+        <a href="#home" class="btn btn-link">Home</a>
+        <a href="#hero" class="btn btn-link">About</a>
+        <a href="#project" class="btn btn-link">Projects</a>
+        <a href="#testimoni" class="btn btn-link">Testimonial</a>
+        <a href="#gallery" class="btn btn-link">Gallery</a>
+        <a href="#contact" class="btn btn-link">Contact</a>
+        <a href="./project.html" class="btn btn-link">Add Project</a>
       </div>
 
-      <div class="credit">
-        <p>Created by <span>RF Muharram</span> | &copy; 2024</p>
+      <div class="credit mt-1">
+        <p class="mb-0">
+          Created by <span class="text-white">RF Muharram</span> | &copy; 2024
+        </p>
       </div>
     </footer>
 
     <!-- Footer End -->
+
     <script src="./assets/JS/asyncTesti.js"></script>
     <script src="./assets/JS/hofGallery.js"></script>
     <script src="../assets/JS/contact.js"></script>
-    <script src="../assets/JS/toggle.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

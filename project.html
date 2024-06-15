@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project</title>
+    <title>Add Your Project</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css?_cacheOverride=1716029438318"
@@ -13,8 +19,8 @@
     />
     <link
       rel="shortcut icon"
-      href="../assets/IMG/2nd R-logo.png"
-      type="image/x-icon"
+      href="./assets/IMG/favicon.ico"
+      type="image/png"
     />
 
     <link rel="stylesheet" href="../assets/CSS/project.css" />
@@ -22,133 +28,236 @@
   <body>
     <!-- Navbar Section Start -->
 
-    <nav class="navbar">
-      <a href="./index.html" class="navbar-logo">MUHARRAM</a>
-
-      <div class="navbar-nav">
-        <a href="./index.html">Home</a>
-        <a href="./index.html#hero">About</a>
-        <a href="./index.html#contact">Contact</a>
-        <a href="./index.html#testimoni">Testimonial</a>
-        <a href="./project.html">Add Project</a>
-      <button class="btn-login">Log in</button>
-      </div>
-      <div class="navbar-extra">
-        <a href="#" id="hamburger-menu"><i class="fa-solid fa-bars"></i></a>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-3">
+      <div class="container-fluid">
+        <a href="./home.html" class="navbar-brand text-secondary fs-2"
+          >MUHARRAM</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-primary fs-4" aria-current="page" href="./index.html"
+                >Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary fs-4" href="./index.html#hero">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary fs-4" href="./index.html#project">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary fs-4" href="./index.html#testimoni">Testimonial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary fs-4" href="./index.html#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary fs-4" href="./index.html#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary fs-4" href="#">Add Project</a>
+            </li>
+          </ul>
+          <button class="btn btn-outline-primary" type="submit">Log in</button>
+        </div>
       </div>
     </nav>
 
     <!-- Navbar Section End -->
 
     <!-- Add Project Section Start -->
-
     <section class="hero-project">
-      <div class="container">
-        <div class="form-box">
-          <form action="#">
-            <h2>Add Your Project</h2>
-            <div class="input-box">
-              <label>Project Name</label>
-              <input type="text" id="title" />
+      <div class="container mt-1">
+        <div class="row p-2">
+          <div class="col-md-8 w-100">
+            <div class="form-box">
+              <form action="#">
+                <h2
+                  class="text-center text-white fs-2 fw-bold mb-2"
+                  style="font-family: Teko, sans-serif"
+                >
+                  Add Your Project
+                </h2>
+                <div class="mb-2">
+                  <label
+                    for="title"
+                    class="form-label mb-1 text-black fw-bold fs-5"
+                    >Project Name</label
+                  >
+                  <input type="text" class="form-control border-0" id="title" />
+                </div>
+                <div class="mb-2">
+                  <label
+                    for="description"
+                    class="form-label mb-1 text-black fw-bold fs-5"
+                    >Description</label
+                  >
+                  <textarea
+                    class="form-control border-0"
+                    style="resize: none; height: 90px"
+                    id="description"
+                    rows="3"
+                  ></textarea>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="mb-2">
+                      <label
+                        for="startdate"
+                        class="form-label mb-1 text-black fw-bold fs-5"
+                        >Start Date</label
+                      >
+                      <input
+                        type="date"
+                        class="form-control border-0"
+                        id="startdate"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="mb-2">
+                      <label
+                        for="enddate"
+                        class="form-label mb-1 text-black fw-bold fs-5"
+                        >End Date</label
+                      >
+                      <input
+                        type="date"
+                        class="form-control border-0"
+                        id="enddate"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-2">
+                  <label class="form-label mb-1 text-black fw-bold fs-5"
+                    >Technologies</label
+                  >
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input border-0"
+                          type="checkbox"
+                          id="nodeJS"
+                        />
+                        <label class="form-check-label text-black" for="nodeJS"
+                          >Node JS</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input border-0"
+                          type="checkbox"
+                          id="reactJS"
+                        />
+                        <label class="form-check-label text-black" for="reactJS"
+                          >React JS</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input border-0"
+                          type="checkbox"
+                          id="javaScript"
+                        />
+                        <label
+                          class="form-check-label text-black"
+                          for="javaScript"
+                          >JavaScript</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input border-0"
+                          type="checkbox"
+                          id="vueJS"
+                        />
+                        <label class="form-check-label text-black" for="vueJS"
+                          >Vue JS</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-2">
+                  <label
+                    for="input-image"
+                    class="form-label mb-1 text-black fw-bold fs-5"
+                    >Upload Image</label
+                  >
+                  <input
+                    type="file"
+                    class="form-control border-0 text-black"
+                    id="input-image"
+                  />
+                </div>
+                <button type="button" class="btn btn-dark-green float-end" onclick="addProject(event)">
+                  Upload
+                </button>
+              </form>
             </div>
-            <div class="input-box">
-              <label>Description</label>
-              <textarea id="description"></textarea>
-            </div>
-            <div class="date-box">
-              <div class="startdate">
-                <label for="startdate">Start Date</label>
-                <input type="date" id="startdate" />
-              </div>
-              <div class="enddate">
-                <label for="enddate">End Date</label>
-                <input type="date" id="enddate" />
-              </div>
-            </div>
-            <label>Technologies</label>
-            <div class="tech-section" id="technologies">
-              <div class="left-forget-sec">
-                <p>
-                  <input type="checkbox" id="nodeJS" />
-                  Node JS
-                </p>
-                <p>
-                  <input type="checkbox" id="reactJS" />
-                  React JS
-                </p>
-              </div>
-              <div class="right-forget-sec">
-                <p>
-                  <input type="checkbox" id="javaScript" />
-                  Java Script
-                </p>
-                <p>
-                  <input type="checkbox" id="vueJS" />
-                  Vue JS
-                </p>
-              </div>
-            </div>
-            <div class="image-box">
-              <label>Upload Image</label>
-              <input type="file" id="input-image" />
-            </div>
-            <button class="btn" type="button" onclick="addProject(event)">
-              Upload
-            </button>
-          </form>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Add Project Section End -->
 
-    <!-- Project Section Start -->
-
-    <section class="project-section">
-      <h2 class="project-title">Projects</h2>
-      <div class="project-container">
-        <div class="card-area" id="new-card">
-     
-        </div>
-      </div>
-    </section>
-
-    <!-- Project Section End -->
-
     <!-- Footer Start -->
 
-    <footer>
+    <footer class="bg-custom text-white text-center mt-5">
       <div class="social">
         <a href="https://linktr.ee/rfmuharram" target="_blank"
-          ><i class="fa-brands fa-instagram"></i
+          ><i class="fab fa-instagram"></i
         ></a>
         <a href="https://linktr.ee/rfmuharram" target="_blank"
-          ><i class="fa-brands fa-x-twitter"></i
+          ><i class="fab fa-twitter"></i
         ></a>
         <a href="https://linktr.ee/rfmuharram" target="_blank"
-          ><i class="fa-brands fa-linkedin-in"></i
+          ><i class="fab fa-linkedin-in"></i
         ></a>
         <a href="https://linktr.ee/rfmuharram" target="_blank">
-          <i class="fa-brands fa-github"></i
+          <i class="fab fa-github"></i
         ></a>
       </div>
 
-      <div class="links">
-        <a href="./index.html">Home</a>
-        <a href="./index.html#hero">About</a>
-        <a href="./index.html#contact">Contact</a>
-        <a href="./index.html#testimoni">Testimonial</a>
-        <a href="./index.html#gallery">Gallery</a>
-        <a href="./project.html">Add Project</a>
+      <div class="links mt-1 mb-2 d-flex justify-content-center flex-wrap">
+        <a href="./index.html" class="btn btn-link">Home</a>
+        <a href="./index.html#hero" class="btn btn-link">About</a>
+        <a href="./index.html#project" class="btn btn-link">Projects</a>
+        <a href="./index.html#testimoni" class="btn btn-link">Testimonial</a>
+        <a href="./index.html#gallery" class="btn btn-link">Gallery</a>
+        <a href="./index.html#contact" class="btn btn-link">Contact</a>
+        <a href="#" class="btn btn-link">Add Project</a>
       </div>
 
-      <div class="credit">
-        <p>Created by <span>RF Muharram</span> | &copy; 2024</p>
+      <div class="credit mt-1">
+        <p class="mb-0">
+          Created by <span class="text-white">RF Muharram</span> | &copy; 2024
+        </p>
       </div>
     </footer>
 
     <!-- Footer End -->
     <script src="../assets/JS/project.js"></script>
-    <script src="../assets/JS/toggle.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
